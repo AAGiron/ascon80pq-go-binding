@@ -11,4 +11,13 @@ In a single line: `git clone --recursive https://github.com/AAGiron/ascon80pq-go
 
 Or use `cd ascon80pq-go-binding && git submodule update --init --recursive` after cloning.
 
+## Ascon-c compiling
 
+In order to compile the required implementations for the binding, use:
+
+```
+mkdir build && cd build
+#cmake .. -DALG_LIST="ascon80pq" -DIMPL_LIST="ref" -DTEST_LIST="genkat"
+cmake .. -DALG_LIST="ascon80pq" -DIMPL_LIST="ref" -DTEST_LIST="genkat" -DBUILD_SHARED_LIBS=ON
+cmake --build .
+```
