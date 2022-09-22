@@ -1,8 +1,6 @@
 #ifndef _ASCON80PQ_H
 #define _ASCON80PQ_H
 
-//int greet(const char *name, int year, char *out);
-
 int crypto_aead_encrypt(unsigned char* c, unsigned long long* clen,
                         const unsigned char* m, unsigned long long mlen,
                         const unsigned char* ad, unsigned long long adlen,
