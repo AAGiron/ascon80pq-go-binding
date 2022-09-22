@@ -12,6 +12,7 @@ Or use `cd ascon80pq-go-binding && git submodule update --init --recursive` afte
 In order to compile the required implementations for the binding, use:
 
 ```
+cd ascon-c
 mkdir build && cd build
 cmake .. -DALG_LIST="ascon80pq" -DIMPL_LIST="ref" -DTEST_LIST="genkat" -DBUILD_SHARED_LIBS=ON
 cmake --build .
