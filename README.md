@@ -14,7 +14,7 @@ In order to compile the required implementations for the binding, use:
 ```
 cd ascon-c
 mkdir build && cd build
-cmake .. -DALG_LIST="ascon80pq" -DIMPL_LIST="ref" -DTEST_LIST="genkat" -DBUILD_SHARED_LIBS=ON
+cmake .. -DALG_LIST="ascon80pq" -DIMPL_LIST="ref" -DBUILD_SHARED_LIBS=ON
 cmake --build .
 ```
 
@@ -22,16 +22,16 @@ Install it (and export) to `LD_LIBRARY_PATH` (e.g., `sudo cp *.so /usr/local/lib
 
 ## Usage
 
-After cloning and building Ascon (above), go back `cd ..` to main directory and then test the binding using `go run test.go`. 
+After cloning and building Ascon (above), go back `cd ../../` to main directory and then test the binding using `go run test.go`. 
 
 
 ## Benchmarking `ascon-80pq`
 
 We also provide a benchmark in an attempt to evaluate the cost of such a binding (C to Go). It is almost identical to [getcycles.c](https://github.com/ascon/ascon-c/blob/main/tests/getcycles.c), with small modifications for building the benchmark. (We might provide results in the future).
 
-The benchmark requires the above build process, a `cd ..`  and the following steps:
+The benchmark requires the above build process, a `cd ../../`  and the following steps:
 ```		
-	cd bench/ 
+	cd bench/
 	cmake  -DBUILD_SHARED_LIBS=ON .
 	cmake --build .
 	sudo cp libascongobench.so /usr/local/lib/
