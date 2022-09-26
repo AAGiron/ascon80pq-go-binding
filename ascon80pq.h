@@ -14,7 +14,8 @@ int crypto_aead_decrypt(unsigned char* m, unsigned long long* mlen,
                         unsigned long long adlen, const unsigned char* npub,
                         const unsigned char* k);
 
-
+//#define TESTVALUE "Hello C!"
+int bench(int frequency_factor);
 
 #endif
 
