@@ -31,10 +31,10 @@ We also provide a benchmark in an attempt to evaluate the cost of such a binding
 
 The benchmark requires the above build process, a `cd ../../`  and the following steps:
 ```		
-	cd bench/
-	cmake  -DBUILD_SHARED_LIBS=ON .
-	cmake --build .
-	sudo cp libascongobench.so /usr/local/lib/
+cd bench/
+cmake  -DBUILD_SHARED_LIBS=ON .
+cmake --build .
+sudo cp libascongobench.so /usr/local/lib/
 ```
 
 Run the benchmark using `go run bench.go`, it calls the benchmarking c-functions for `ascon-80pq` and displays the results.
